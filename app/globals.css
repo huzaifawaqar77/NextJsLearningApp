@@ -56,6 +56,9 @@ select {
   background-image: url("../public/wickedbackground.svg");
   background-size: cover;
 }
+.course {
+  height: 280px;
+}
 
 /* @media (max-width: 600px) {
   .profile-page {

@@ -1,8 +1,9 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
+//import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+//import { cookies } from "next/headers";
+import SupaBaseServer from "@/app/components/SupaBaseServer";
 import Link from "next/link";
 const Courses = async () => {
-  const supabase = createServerComponentClient({ cookies });
+  const supabase = await SupaBaseServer();
   let { data, error } = await supabase.from("Courses").select();
   if (error) console.log(error);
   return (

@@ -1,10 +1,11 @@
 import ProfileForm from "@/app/components/ProfileForm";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
+// import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+// import { cookies } from "next/headers";
+import SupaBaseServer from "@/app/components/SupaBaseServer";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 const Profile = async () => {
-  const supabase = createServerComponentClient({ cookies });
+  const supabase = await SupaBaseServer();
   const {
     data: { session },
   } = await supabase.auth.getSession();
