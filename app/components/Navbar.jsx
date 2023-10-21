@@ -27,7 +27,7 @@ const Navbar = async ({ user, profilePic }) => {
       </div>
       {user && (
         <>
-          <div className="ml-auto flex gap-2 justify-between">
+          <div className="ml-auto flex gap-2 justify-between items-center">
             <p className="text-purple-500 font-semibold max-lg:hidden">{`Hello! ${user.email}`}</p>
             <Link href="/profile">
               {!profilePic && (

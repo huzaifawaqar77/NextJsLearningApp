@@ -14,7 +14,7 @@ const SelectionForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex gap-4 items-center justify-center my-4 rounded-sm"
+      className="flex gap-4 items-center justify-center my-4 rounded-sm flex-col"
     >
       <select
         className="px-4 py-2 border-2 border-black rounded-sm "
